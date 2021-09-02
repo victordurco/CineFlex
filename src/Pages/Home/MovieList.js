@@ -1,4 +1,5 @@
 import './MovieList.css';
+import loading from '../../loading.gif';
 import axios from "axios";
 import { useState, useEffect } from 'react';
 const API_URL = 'https://mock-api.bootcamp.respondeai.com.br/api/v3/cineflex';
@@ -24,7 +25,11 @@ export default function MovieList(){
     },[]);
    
     if(movies.length === 0) {
-		return <img src='../../loading.gif' alt='loading gif'/>;
+		return (
+            <div className='movieList'>
+                <img src={loading} alt='loading gif'/>;
+            </div>
+        );        
 	}
 
     return (
