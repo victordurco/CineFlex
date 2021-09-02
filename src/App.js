@@ -19,6 +19,9 @@ function App() {
           <Route path='/' exact>
             <Home />
           </Route>
+          <Route path='/sessoes/:idFilme' exact>
+  
+          </Route>
         </Switch>
         
       </div>
