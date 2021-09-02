@@ -1,0 +1,26 @@
+
+.session{
+    min-height: 100px;
+    margin: 0 0 23px 24px;
+    display: flex;
+    flex-direction: column;
+    color: #293845;
+    font-size: 20px;
+}
+
+.showTimes{
+    display: flex;
+    flex-direction: initial;
+    flex-wrap: wrap;
+}
+
+.showTime{
+    height: 43px;
+    width: 83px;
+    margin: 22px 8px 0 0;
+    background-color: #E8833A;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 18px;
+}

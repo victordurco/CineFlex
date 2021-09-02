@@ -1,21 +1,27 @@
+import './Session.css';
 import { Link } from "react-router-dom";
 
 const ShowTime = ({name, id}) => {
     return (
         <Link to = {`/assentos/${id}`}>
-            <button>{name}</button>
+            <button className='showTime'>{name}</button>
         </Link>
     );
 }
 
-export default function Session({id, date, weekday, showtimes}){
-    console.log('entrei em session')
+export default function Session({date, weekday, showtimes}){
     return(
-        <div>
+        <div className='session'>
             <span>{`${weekday} - ${date}`}</span>
-            {showtimes.map((showtime, index) => {
-                <ShowTime />
-            })}
+            <div className='showTimes'>
+                {showtimes.map((showtime, index) => 
+                    <ShowTime 
+                        key = {index}  
+                        name = {showtime.name}
+                        id = {showtime.id}  
+                    />
+                )}
+            </div>
         </div>
     );
 }
