@@ -2,13 +2,16 @@ import './MovieList.css';
 import loading from '../../loading.gif';
 import axios from "axios";
 import { useState, useEffect } from 'react';
-const API_URL = 'https://mock-api.bootcamp.respondeai.com.br/api/v3/cineflex';
+import { Link } from 'react-router-dom';
+const API_URL = 'https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex';
 
 
-const Movie = ({img, title}) => {
+const Movie = ({img, id}) => {
     return (
         <div className='moviePoster'>
-            <img src={img} alt='movie poster'/>
+            <Link to={`/sessoes/${id}`}>
+                <img src={img} alt='movie poster'/>
+            </Link>
         </div>
     );
 }
@@ -37,6 +40,7 @@ export default function MovieList(){
             {movies.map((movie, index)=>
                 <Movie 
                     key={index}
+                    id={movie.id}
                     img={movie.posterURL}
                     title={movie.title}        
                 />
