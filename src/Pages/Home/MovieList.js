@@ -1,5 +1,6 @@
 import './MovieList.css';
-import loading from '../../loading.gif';
+import '../../Components/Shared/loading.css';
+import loading from '../../Components/Shared/loading.gif';
 import axios from "axios";
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -29,7 +30,7 @@ export default function MovieList(){
    
     if(movies.length === 0) {
 		return (
-            <div className='movieList'>
+            <div className='loadingContainer'>
                 <img src={loading} alt='loading gif'/>;
             </div>
         );        

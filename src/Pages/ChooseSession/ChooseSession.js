@@ -1,4 +1,5 @@
-import loading from '../../loading.gif';
+import '../../Components/Shared/loading.css';
+import loading from '../../Components/Shared/loading.gif';
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -14,11 +15,14 @@ export default function ChooseSession(){
     useEffect(()=>{
         const request = axios.get(API_URL+`/movies/${id}/showtimes`);
         request.then(response => {setSessions(response.data)});
-       
-    },[]);
+    },[id]);
 
     if(sessions===null)
-        return <img src={loading} alt='loading gif'/>;
+        return (
+            <div className='loadingContainer'>
+                <img src={loading} alt='loading gif'/>
+            </div>
+        );
         
     return (
         <div>

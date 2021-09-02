@@ -1,0 +1,19 @@
+.seats{
+    display: flex;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 203px;
+    padding: 0 17px 0 24px;
+}
+.seat{
+    width: 26px;
+    height: 26px;
+    background-color: #C3CFD9;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 7px 18px 0;
+    font-size: 11px;
+}
