@@ -19,7 +19,7 @@
     margin-top: 5px;
 }
 
-.selected{
+.selectedSubtitle{
     height: 25px;
     width: 25px;
     border-radius: 17px;
@@ -27,7 +27,7 @@
     border: 1px solid #1AAE9E;
 }
 
-.available{
+.availableSubtitle{
     height: 25px;
     width: 25px;
     border-radius: 17px;
@@ -35,7 +35,7 @@
     border: 1px solid #7B8B99;
 }
 
-.unavailable{
+.unavailableSubtitle{
     height: 25px;
     width: 25px;
     border-radius: 17px;
