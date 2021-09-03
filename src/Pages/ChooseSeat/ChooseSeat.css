@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .seats{
     display: flex;
     flex-direction: initial;
@@ -18,4 +21,12 @@
     align-items: center;
     margin: 0 7px 18px 0;
     font-size: 11px;
+}
+
+.selected{
+    background-color: #8DD7CF;
+}
+
+.unavailable{
+    background-color: #FBE192;
 }
