@@ -5,6 +5,7 @@ import PageTitle from '../Home/PageTitle';
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import SeatsSubtitle from './SeatsSubtitle';
 const API_URL = 'https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex';
 
 const Seat = ({name}) => {
@@ -43,6 +44,7 @@ export default function ChooseSeat(){
                     />
                 )}
             </div>
+            <SeatsSubtitle />
         </div>
     );
 }

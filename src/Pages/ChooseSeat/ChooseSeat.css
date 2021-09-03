@@ -3,7 +3,9 @@
     flex-direction: initial;
     flex-wrap: wrap;
     width: 100%;
+    max-width: 375px;
     min-height: 203px;
+    margin: 0 auto;
     padding: 0 17px 0 24px;
 }
 .seat{
