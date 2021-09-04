@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import SeatsSubtitle from './SeatsSubtitle';
-import BuyerInfo from './BuyerInfo';
+import Buyer from './Buyer';
 const API_URL = 'https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex';
 
 const Seat = ({name, isAvailable}) => {
@@ -21,21 +21,34 @@ const Seat = ({name, isAvailable}) => {
     }
 
     return (
-        <div className={`seat ${isAvailable? seatStatus : 'unavailable'}`} onClick={()=>selectSeat()}>
-            {name}
+        <div 
+            className={`seat ${isAvailable? seatStatus : 'unavailable'}`} 
+            onClick={()=> isAvailable? selectSeat() : alert('Esse assento não está disponível')}>
+                {name}
         </div>
     );
 }
+
 
 export default function ChooseSeat(){
     const [session, setSession] = useState(null);
     const {idSessao} = useParams();
     const id = idSessao;
+
     useEffect(()=>{
         const request = axios.get(API_URL+`/showtimes/${id}/seats`);
         request.then(response => {setSession(response.data)});
     },[id]);
 
+    const validadeBuyer = (name, cpf) =>{
+        const isCPFValid = /^([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}|[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})$/.test(cpf);
+        const isNameValid = (name.length >= 5);
+        if(!isNameValid)
+            return alert('Nome inválido');
+        if(!isCPFValid)
+            return alert('CPF inválido');
+        return alert('Tudo certo');
+    }
 
     return (
         session === null ?
@@ -55,8 +68,7 @@ export default function ChooseSeat(){
                     )}
                 </div>
                 <SeatsSubtitle />
-                <BuyerInfo />
-                <button className='reserveSeat'>Reservar assento(s)</button>
+                <Buyer validadeBuyer={validadeBuyer}/>
             </div>
     );
 }

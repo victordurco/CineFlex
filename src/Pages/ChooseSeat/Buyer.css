@@ -14,3 +14,13 @@
     border: 1px solid #D4D4D4;
     margin-bottom: 7px;
 }
+
+.reserveSeat{
+    width: 255px;
+    height: 42px;
+    background-color: #E8833A;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    margin: 57px auto 0 auto;
+}
