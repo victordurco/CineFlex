@@ -1,0 +1,16 @@
+.buyerInfo{
+    display: flex;
+    flex-direction: column;
+    width: 327px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #293845;
+    margin: 42px auto 0 auto;
+}
+
+.buyerInfo input{
+    height: 51px;
+    border-radius: 3px;
+    border: 1px solid #D4D4D4;
+    margin-bottom: 7px;
+}

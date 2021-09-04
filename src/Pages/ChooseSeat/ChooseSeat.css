@@ -1,6 +1,13 @@
 *{
     box-sizing: border-box;
 }
+
+.chooseSeatContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .seats{
     display: flex;
     flex-direction: initial;
@@ -31,4 +38,14 @@
 
 .unavailable{
     background-color: #FBE192;
+}
+
+.reserveSeat{
+    width: 255px;
+    height: 42px;
+    background-color: #E8833A;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    margin: 57px auto 0 auto;
 }

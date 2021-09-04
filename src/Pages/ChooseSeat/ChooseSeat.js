@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import SeatsSubtitle from './SeatsSubtitle';
+import BuyerInfo from './BuyerInfo';
 const API_URL = 'https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex';
 
 const Seat = ({name, isAvailable}) => {
@@ -42,8 +43,7 @@ export default function ChooseSeat(){
                 <img src={loading} alt='loading gif'/>
             </div> 
             :
-            <div>
-                {console.log(session)}
+            <div className='chooseSeatContainer'>
                 <PageTitle>Selecione o(s) assento(s)</PageTitle>
                 <div className='seats'>
                     {session.seats.map((seat, index)=>
@@ -53,8 +53,10 @@ export default function ChooseSeat(){
                             isAvailable = {seat.isAvailable}
                         />
                     )}
+                </div>
+                <SeatsSubtitle />
+                <BuyerInfo />
+                <button className='reserveSeat'>Reservar assento(s)</button>
             </div>
-            <SeatsSubtitle />
-        </div>
     );
 }
