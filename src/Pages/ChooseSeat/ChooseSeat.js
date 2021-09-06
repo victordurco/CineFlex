@@ -56,12 +56,11 @@ export default function ChooseSeat() {
         };
         let promise = axios.post(`${API_URL}/seats/book-many`, order);
         promise.then(() => {
-            alert('POSTADO');
             localStorage.setItem("order", JSON.stringify(order));
             localStorage.setItem("session", JSON.stringify(session));
             setReadyToRedirect(true);
         });
-        promise.catch(() => alert('DEU RUIM'));
+        promise.catch(() => alert('Reserva não efetuada'));
     }
 
     const validadeBuyer = (name, cpf) => {
