@@ -1,4 +1,4 @@
-import PageTitle from "./PageTitle";
+import PageTitle from "../../Components/Shared/PageTitle";
 import MovieList from "./MovieList";
 
 export default function Home(){

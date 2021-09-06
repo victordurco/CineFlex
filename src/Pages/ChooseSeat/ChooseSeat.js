@@ -1,7 +1,7 @@
 import '../../Components/Shared/loading.css';
 import './ChooseSeat.css';
 import loading from '../../Components/Shared/loading.gif';
-import PageTitle from '../Home/PageTitle';
+import PageTitle from '../../Components/Shared/PageTitle'
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, Redirect } from "react-router-dom";

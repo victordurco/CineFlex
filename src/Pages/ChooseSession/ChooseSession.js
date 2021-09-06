@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Session from './Session';
-import PageTitle from '../Home/PageTitle';
+import PageTitle from '../../Components/Shared/PageTitle';
 import Footer from '../../Components/Shared/Footer';
 const API_URL = 'https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex';
 
