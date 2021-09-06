@@ -17,7 +17,6 @@ export default function OrderSuccess(){
     
     return (
         <div className='OrderSuccessContainer'>
-            {console.log(session)}
             <span className='successTitle'>Pedido feito com sucesso!</span>
             <span className='infoTitle'>Filme e sessão</span>
             <span className='infoText'>{session.movie.title}</span>
@@ -28,7 +27,7 @@ export default function OrderSuccess(){
             <span className='infoText'>{`Nome: ${order.name}`}</span>
             <span className='infoText'>{`CPF: ${order.cpf}`}</span>
             <Link to='/'>
-            <button onClick={()=>clearLocalStorage()}>Voltar para Home</button>
+                <button onClick={()=>clearLocalStorage()}>Voltar para Home</button>
             </Link>
         </div>
     );
