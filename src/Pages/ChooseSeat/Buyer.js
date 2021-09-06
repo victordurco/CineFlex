@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { Redirect } from "react-router";
 import './Buyer.css'
 
 
 export default function BuyerInfo({validadeBuyer}){
     const [buyerName, setBuyerName] = useState('');
     const [buyerCPF, setBuyerCPF] = useState('');
-
+    
     return (
         <>
             <div className='buyerInfo'>

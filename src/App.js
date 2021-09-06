@@ -4,6 +4,7 @@ import Header from './Components/Shared/Header';
 import Home from './Pages/Home/Home';
 import ChooseSession from './Pages/ChooseSession/ChooseSession';
 import ChooseSeat from './Pages/ChooseSeat/ChooseSeat';
+import OrderSuccess from './Pages/OrderSuccess/OrderSuccess';
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route path='/assentos/:idSessao' exact>
             <ChooseSeat />
+          </Route>
+          <Route path='/sucesso'>
+            <OrderSuccess />
           </Route>
         </Switch>
         
