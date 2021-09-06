@@ -9,6 +9,7 @@ import SeatsSubtitle from './SeatsSubtitle';
 import Buyer from './Buyer';
 import Footer from '../../Components/Shared/Footer';
 const API_URL = 'https://mock-api.bootcamp.respondeai.com.br/api/v2/cineflex';
+/* eslint-disable */
 
 const Seat = ({ id, name, isAvailable, reserveSeats }) => {
     const [seatStatus, setSeatStatus] = useState('');
